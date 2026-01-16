@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Noto_Serif_JP, Reggae_One } from "next/font/google";
 import "./globals.css";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${notoSerifJP.variable} ${reggaeOne.variable} antialiased bg-[#0a0e17] text-white overflow-hidden`}
       >
         {children}
+        <GoogleAnalytics gaId="G-77Y3FNLZDR" />
       </body>
     </html>
   );
